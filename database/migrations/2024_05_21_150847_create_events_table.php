@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('end_date');
             $table->string('image');
             $table->string('address');
-            $table->interface('num_tickets');
+            $table->integer('num_tickets');
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('country_id')->constrained();
             $table->foreignId('city_id')->constrained();
