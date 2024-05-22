@@ -19,7 +19,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('/events', EventController::class);
-    Route::resource('/galeries', GalleryController::class);
+    Route::resource('/galleries', GalleryController::class);
 });
 
 require __DIR__ . '/auth.php';
