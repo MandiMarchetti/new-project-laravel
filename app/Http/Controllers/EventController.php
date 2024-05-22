@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,8 @@ class EventController extends Controller
      */
     public function create(): View
     {
-        return view('events.create');
+        $countries = Country::all();
+        return view('events.create', compact('countries'));
     }
 
     /**
